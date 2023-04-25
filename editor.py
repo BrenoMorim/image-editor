@@ -85,5 +85,8 @@ def execute(args: Validator) -> None:
     :type args: Validator
     """
     with Image.open(args.input) as image:
-        result_image = function_mapping[args.action](image)
+        if args.action == "resize":
+            result_image = image.resize(args.size)
+        else:
+            result_image = function_mapping[args.action](image)
         result_image.save(args.output)

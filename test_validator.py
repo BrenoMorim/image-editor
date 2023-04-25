@@ -26,3 +26,14 @@ def test_validator_must_accept_only_valid_actions():
 
     with pytest.raises(ValueError):
         Validator("image.png", "image.png", "invalid")
+
+def test_validator_must_accept_only_valid_sizes():
+    val = Validator("image.png", "image.png", "resize", "400x200")
+    assert val.size == (400, 200)
+
+    with pytest.raises(ValueError):
+        Validator("image.png", "image.png", "resize", "400, 200")
+
+def test_size_is_mandatory_when_action_is_resize():
+    with pytest.raises(ValueError):
+        Validator("image.png", "image.png", "resize")
