@@ -1,6 +1,6 @@
 # Image Editor
 
-## Video Demo:  <URL HERE>
+## Video Demo:  <https://youtu.be/qlr_TKfve0g>
 
 ### Description
 
