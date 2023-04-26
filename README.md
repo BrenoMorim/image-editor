@@ -95,7 +95,7 @@ python project.py -i tv.png -o outline.png -a contour
 
 - editor.py: Contains all the image edition functions, which use the Pillo library
 - validator.py: It's a class meant to store the arguments and validate them
-- test_validator.py: A test file to make sure the validations in validator.py are working
+- test_project.py: A test file to make sure the validations in validator.py are working
 - project.py: The main file, which has a main function and uses the argparser lib to catch the CLI arguments
 - tv.png: A sample image to be used for manual testing
 - requirements.txt: File to store all the pip dependencies
